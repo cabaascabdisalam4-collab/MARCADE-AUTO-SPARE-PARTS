@@ -1,48 +1,25 @@
 <!DOCTYPE html>
-<html lang="so">
+<html lang="en">
 <head>
-    <meta name="description" content="MARACADE AUTO SPARE PARTS - The best shop for high-quality motorcycle and car spare parts in Somalia. We offer genuine engines, tires, and accessories.">
-<meta name="keywords" content="Maracade Auto, Spare Parts Somalia, Motorcycle parts Mogadishu, Car parts Somalia, Genuine engines, Kavaki parts">
-<meta name="author" content="Maracade Auto">
-
-<meta property="og:title" content="MARACADE AUTO SPARE PARTS | Quality & Reliability">
-<meta property="og:description" content="Get the best deals on genuine auto parts. Order now via WhatsApp!">
-<meta property="og:image" content="8958.jpg"> ```
-
-
-
----
-
-### 2. Sida SEO-gaagu u noqon karo mid xooggan
-Si Google ay kor ugu soo qaaddo website-kaaga, raac talooyinkan:
-
-* **Alt Text:** Hubi in sawir kasta uu leeyahay qoraal sharraxaya, tusaale: `<img src="8956.jpg" alt="Original Engine Spare Part - Maracade Auto">`.
-* **Page Title:** Isticmaal cinwaanno cad-cad sida `<h1>MARACADE AUTO SPARE PARTS</h1>`. Google waxay aad u akhrisaa qoraalka ku dhex jira `<h1>`.
-* **Mobile Friendly:** Maadaama website-kaagu hadda yahay mid mobile-ka ku habboon (Responsive), Google waxay ku siinaysaa dhibco dheeraad ah.
-
----
-
-### 3. Tallaabada ugu dambaysa: Google Search Console
-Haddii aad rabto in Google ay isla hadda akhriso website-kaaga, waa inaad iska diiwaangelisaa **Google Search Console**. Halkaas ayaad geliyaa link-gaaga GitHub Pages si Google u bilowdo "Crawling" ama akhrinta boggaaga.
-
-
-
-Hambalyo markale! Website-kaagu hadda waa mid dhammaystiran (Professional).
-
-**Ma jeclaan lahayd inaan ku baro sida loo abuuro "Contact Form" ay macaamiishu magacooda iyo fariintooda kuugu soo dirayaan adigoo isticmaala adeeg bilaash ah sida Formspree?**
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARACADE AUTO SPARE PARTS | Tayo iyo Kalsooni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="MARACADE AUTO SPARE PARTS - Premier distributor of genuine motorcycle and bicycle parts in Somalia.">
+    <title>MARACADE AUTO SPARE PARTS | Official Website</title>
     
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-red: #ff0000;
-            --dark-black: #0a0a0a;
-            --accent-gray: #1f1f1f;
-            --white: #ffffff;
-            --transition: all 0.3s ease;
+            --primary-red: #e74c3c; /* Modern Red */
+            --dark-red: #c0392b;
+            --black-bg: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-color: #f0f0f0;
+            --gray-text: #b3b3b3;
+            --transition: all 0.4s ease;
         }
 
         * {
@@ -53,54 +30,67 @@ Hambalyo markale! Website-kaagu hadda waa mid dhammaystiran (Professional).
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--dark-black);
-            color: var(--white);
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--black-bg);
+            color: var(--text-color);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- Header & Nav --- */
+        /* --- NAVIGATION --- */
         header {
-            background: rgba(10, 10, 10, 0.95);
-            padding: 15px 5%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
             z-index: 1000;
             border-bottom: 2px solid var(--primary-red);
+            backdrop-filter: blur(10px);
         }
 
         .logo {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-weight: 900;
             letter-spacing: 2px;
+            color: white;
+            text-decoration: none;
         }
 
         .logo span { color: var(--primary-red); }
 
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 30px; }
-        nav ul li a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: 600;
-            transition: var(--transition);
-            font-size: 0.9rem;
-            text-transform: uppercase;
+        nav ul {
+            display: flex;
+            list-style: none;
         }
-        nav ul li a:hover { color: var(--primary-red); }
 
-        /* --- Hero Section --- */
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-red);
+            letter-spacing: 1px;
+        }
+
+        /* --- HERO SECTION --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('8958.jpg'); /* Sawirka weyn ee Mootada */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('8958.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -111,61 +101,97 @@ Hambalyo markale! Website-kaagu hadda waa mid dhammaystiran (Professional).
 
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
+            text-transform: uppercase;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(255,0,0,0.5);
+            text-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+            animation: slideDown 1s ease;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 30px;
-            color: #ccc;
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: #ddd;
+            animation: slideUp 1s ease;
         }
 
-        .cta-btn {
-            padding: 15px 35px;
+        .btn {
+            padding: 15px 40px;
             background: var(--primary-red);
-            color: var(--white);
+            color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
             border-radius: 50px;
             transition: var(--transition);
+            border: 2px solid var(--primary-red);
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .cta-btn:hover {
-            transform: scale(1.1);
+        .btn:hover {
+            background: transparent;
+            color: var(--primary-red);
             box-shadow: 0 0 20px var(--primary-red);
         }
 
-        /* --- Gallery Section --- */
-        .section { padding: 80px 5%; }
+        /* --- FILTER BUTTONS --- */
+        .filter-container {
+            text-align: center;
+            padding: 80px 0 20px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #333;
+            color: white;
+            padding: 10px 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+            transform: scale(1.05);
+        }
+
+        /* --- GALLERY GRID --- */
         .section-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 50px;
         }
-        .section-title span { color: var(--primary-red); }
+        .section-title span { color: var(--primary-red); border-bottom: 3px solid var(--primary-red); }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 5%;
         }
 
         .card {
-            background: var(--accent-gray);
+            background: var(--card-bg);
             border-radius: 15px;
             overflow: hidden;
-            transition: var(--transition);
             border: 1px solid #333;
+            transition: var(--transition);
+            position: relative;
         }
 
         .card:hover {
-            border-color: var(--primary-red);
             transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .card img {
@@ -175,129 +201,314 @@ Hambalyo markale! Website-kaagu hadda waa mid dhammaystiran (Professional).
             transition: var(--transition);
         }
 
-        .card:hover img { transform: scale(1.05); }
+        .card:hover img { transform: scale(1.1); filter: brightness(0.8); }
 
-        .card-content { padding: 20px; text-align: center; }
-        .card-content h3 { margin-bottom: 15px; font-family: 'Orbitron'; font-size: 1.1rem; }
+        .card-content {
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: var(--card-bg);
+        }
 
-        /* --- WhatsApp Floating Button --- */
+        .card h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .wa-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #25d366;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .wa-link:hover { text-decoration: underline; }
+
+        /* Animation Classes */
+        .card.hide { display: none; }
+        .card.show { animation: fadeIn 0.5s ease forwards; }
+
+        /* --- FEATURES (WHY CHOOSE US) --- */
+        .features {
+            background: #141414;
+            padding: 80px 5%;
+            margin-top: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 3.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 { font-family: 'Orbitron'; margin-bottom: 15px; font-size: 1.5rem; }
+        .feature-box p { color: var(--gray-text); }
+
+        /* --- TESTIMONIALS (PARALLAX) --- */
+        .testimonials {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('8966.jpg'); /* Engine Image */
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .test-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 350px;
+        }
+
+        .stars { color: #f1c40f; margin-bottom: 15px; }
+        .test-card h4 { margin-top: 20px; color: var(--primary-red); font-style: italic; }
+
+        /* --- NEWSLETTER --- */
+        .newsletter {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #1a1a1a, #0a0a0a);
+        }
+
+        .newsletter-form input {
+            padding: 15px;
+            width: 300px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+            background: var(--primary-red);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        .newsletter-form button:hover { background: white; color: black; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #050505;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+        
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
             background: #25d366;
-            width: 60px;
-            height: 60px;
+            color: white;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 30px;
-            color: white;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            font-size: 35px;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
             z-index: 1000;
             transition: var(--transition);
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
 
-        /* --- About Us --- */
-        #about { background: #111; text-align: center; }
-        .about-text { max-width: 900px; margin: 0 auto; color: #aaa; font-size: 1.1rem; }
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- Footer --- */
-        footer {
-            padding: 40px 5%;
-            background: var(--dark-black);
-            text-align: center;
-            border-top: 1px solid #222;
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Mobile menu can be added later */
+            .newsletter-form input { width: 100%; margin-bottom: 10px; }
+            .newsletter-form button { width: 100%; margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">MARACADE <span>AUTO</span></div>
+        <a href="#" class="logo">MARACADE <span>AUTO</span></a>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#parts">Spare Parts</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Why Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>MARACADE AUTO</h1>
-        <p>Waxaan kuu haynaa spare parts-ka ugu tayada fiican ee mootooyinka iyo baabuurta. Hel agab asli ah oo lagu kalsoonaan karo.</p>
-        <a href="#parts" class="cta-btn">Eeg Agabka Hadda</a>
+    <section id="home" class="hero">
+        <h1>Ride With Confidence</h1>
+        <p>Your #1 Source for Genuine Motorcycle & Bicycle Spare Parts in Somalia. Reliable Engines. Durable Parts. Unbeatable Prices.</p>
+        <a href="#products" class="btn">Explore Inventory</a>
     </section>
 
-    <section class="section" id="parts">
-        <h2 class="section-title">Our <span>Spare Parts</span></h2>
+    <section id="products">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="motorcycle">Motorcycles</button>
+            <button class="filter-btn" data-filter="bicycle">Bicycles</button>
+            <button class="filter-btn" data-filter="parts">Spare Parts</button>
+        </div>
+
+        <h2 class="section-title">Premium <span>Inventory</span></h2>
+
         <div class="gallery-grid">
             
-            <div class="card">
-                <img src="8956.jpg" alt="Engine Part">
+            <div class="card show" data-category="motorcycle">
+                <img src="8958.jpg" alt="Sport Bike">
                 <div class="card-content">
-                    <h3>High Performance Engines</h3>
-                    <a href="https://wa.me/252610000000?text=Waxaan rabaa Engine" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <h3>High-Performance Sport Bike</h3>
+                    <p>Powerful 250cc engine with modern design.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in the Sport Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="8957.jpg" alt="ATV Bike">
+            <div class="card show" data-category="motorcycle">
+                <img src="8957.jpg" alt="ATV Quad">
                 <div class="card-content">
-                    <h3>Premium ATV Spare Parts</h3>
-                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <h3>Off-Road ATV Quad</h3>
+                    <p>Rugged design for any terrain.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in the ATV" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="8963.jpg" alt="Motorcycle">
+            <div class="card show" data-category="motorcycle">
+                <img src="8963.jpg" alt="Kavaki Bike">
                 <div class="card-content">
-                    <h3>KAVAKI Motorbikes</h3>
-                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <h3>KAVAKI Utility Bike</h3>
+                    <p>Fuel efficient and durable for daily use.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in Kavaki" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="8964.jpg" alt="Bicycle">
+            <div class="card show" data-category="bicycle">
+                <img src="8964.jpg" alt="Mountain Bike">
                 <div class="card-content">
-                    <h3>Mountain Bike Parts</h3>
-                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <h3>Pro Mountain Bike</h3>
+                    <p>Suspension system and lightweight frame.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in Mountain Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="8959.jpg" alt="E-Bike Tech">
+            <div class="card show" data-category="bicycle">
+                <img src="8965.jpg" alt="Electric Bike">
                 <div class="card-content">
-                    <h3>Electric Bike Systems</h3>
-                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <h3>LMX Electric Bike</h3>
+                    <p>Modern e-bike with long battery life.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in E-Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="8966.jpg" alt="Chrome Engine">
+            <div class="card show" data-category="parts">
+                <img src="8956.jpg" alt="Engine Block">
+                <div class="card-content">
+                    <h3>Complete Engine Assembly</h3>
+                    <p>Genuine engine blocks for maximum power.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in Engine" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
+            </div>
+
+            <div class="card show" data-category="parts">
+                <img src="8932.jpg" alt="Chrome Cover">
                 <div class="card-content">
                     <h3>Chrome Engine Covers</h3>
-                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                    <p>Stylish protection for your motorbike.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in Chrome Parts" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
+            </div>
+             <div class="card show" data-category="parts">
+                <img src="8959.jpg" alt="Bike Chain">
+                <div class="card-content">
+                    <h3>Transmission Systems</h3>
+                    <p>Chains, sprockets, and belts.</p>
+                    <a href="https://wa.me/252617720769?text=I'm interested in Transmission" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="section" id="about">
-        <h2 class="section-title">About <span>Us</span></h2>
-        <div class="about-text">
-            <p>Maracade Auto Spare Parts waa shirkadda hormuudka u ah keenista agabka baabuurta iyo mootooyinka ee dalka. Waxaan xoogga saarnaa tayada iyo qancinta macaamiisheena. Dhammaan alaabtayada waa kuwo dammaanad leh oo laga keenay warshadaha ugu caansan caalamka.</p>
+    <section id="features" class="features">
+        <h2 class="section-title">Why Choose <span>Maracade?</span></h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>We deliver across Somalia with speed and care.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-medal"></i>
+                <h3>Genuine Parts</h3>
+                <p>100% Original parts directly from manufacturers.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Expert mechanics ready to assist you anytime.</p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 MARACADE AUTO SPARE PARTS. All Rights Reserved.</p>
-        <p style="margin-top: 10px; color: #555;">Developed with ❤️ for Maracade</p>
+    <section class="testimonials">
+        <h2 class="section-title">Customer <span>Reviews</span></h2>
+        <div class="testimonial-container">
+            <div class="test-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Best place for bike engines in Mogadishu. The quality is unmatched!"</p>
+                <h4>- Hassan Ali</h4>
+            </div>
+            <div class="test-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p>"I bought my mountain bike here. Great service and friendly staff."</p>
+                <h4>- Mohamed Deeq</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2 style="font-family:'Orbitron'; margin-bottom: 20px;">Join Our Newsletter</h2>
+        <p style="margin-bottom: 20px; color: #ccc;">Get the latest updates on new arrivals and discounts.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <div class="logo" style="font-size: 1.5rem;">MARACADE <span>AUTO</span></div>
+        <p style="margin: 15px 0; color: #777;">Quality you can trust. Power you can feel.</p>
+        <p style="color: #555;">&copy; 2026 Maracade Auto Spare Parts. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Developed with <span style="color: red;">&hearts;</span> for Maracade</p>
     </footer>
 
     <a href="https://wa.me/252617720769" class="whatsapp-float" target="_blank">
@@ -305,18 +516,42 @@ Hambalyo markale! Website-kaagu hadda waa mid dhammaystiran (Professional).
     </a>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
+        // 1. Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                // Add active to clicked
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if(filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                    } else {
+                        card.classList.add('hide');
+                        card.classList.remove('show');
+                    }
                 });
             });
         });
+
+        // 2. Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // 3. Simple Form Alert
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to Maracade Auto!');
+        });
     </script>
 </body>
-
 </html>
