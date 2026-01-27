@@ -3,180 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARACADE AUTO SPARE PARTS | Official Store</title>
+    <meta name="description" content="MARACADE AUTO SPARE PARTS - Premier distributor of genuine motorcycle and bicycle parts in Somalia.">
+    <title>MARACADE AUTO SPARE PARTS | Official Website</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-red: #e74c3c;
-            --black-bg: #0a0a0a;
-            --card-bg: #161616;
-            --text-white: #ffffff;
-            --transition: 0.4s ease;
+            --primary-red: #e74c3c; /* Modern Red */
+            --dark-red: #c0392b;
+            --black-bg: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-color: #f0f0f0;
+            --gray-text: #b3b3b3;
+            --transition: all 0.4s ease;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Rajdhani', sans-serif; background: var(--black-bg); color: var(--text-white); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-        /* Navigation */
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--black-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
         header {
-            position: fixed; top: 0; width: 100%; padding: 20px 5%;
-            background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px);
-            display: flex; justify-content: space-between; align-items: center;
-            z-index: 1000; border-bottom: 2px solid var(--primary-red);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+            backdrop-filter: blur(10px);
         }
-        .logo { font-family: 'Orbitron'; font-size: 1.4rem; color: white; text-decoration: none; letter-spacing: 1px; }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: white;
+            text-decoration: none;
+        }
+
         .logo span { color: var(--primary-red); }
 
-        /* Hero Section */
-        .hero {
-            height: 90vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('8958.jpg');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-            padding: 0 20px;
+        nav ul {
+            display: flex;
+            list-style: none;
         }
-        .hero h1 { font-family: 'Orbitron'; font-size: 3.5rem; margin-bottom: 20px; text-transform: uppercase; }
-        .hero p { font-size: 1.4rem; max-width: 800px; margin-bottom: 30px; color: #ccc; }
 
-        /* Filter Buttons */
-        .filter-container { text-align: center; padding: 100px 0 40px; }
-        .filter-btn {
-            background: transparent; border: 2px solid var(--primary-red); color: white;
-            padding: 10px 25px; margin: 5px; border-radius: 30px; cursor: pointer; 
-            transition: var(--transition); font-weight: bold; text-transform: uppercase;
-        }
-        .filter-btn.active, .filter-btn:hover { background: var(--primary-red); box-shadow: 0 0 15px var(--primary-red); }
+        nav ul li { margin-left: 30px; }
 
-        /* Gallery Grid */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5%; }
-        .card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: var(--transition); }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary-red); }
-        .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-content { padding: 25px; text-align: center; }
-        .card h3 { font-family: 'Orbitron'; font-size: 1.2rem; margin-bottom: 10px; }
-        .card.hide { display: none; }
-
-        /* Location Section */
-        .location-section { padding: 80px 5%; text-align: center; }
-        .map-wrapper { border: 3px solid var(--primary-red); border-radius: 20px; overflow: hidden; margin-top: 30px; box-shadow: 0 0 20px rgba(231, 76, 60, 0.2); }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white;
-            padding: 15px 25px; border-radius: 50px; text-decoration: none; display: flex;
-            align-items: center; gap: 10px; font-weight: bold; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
             transition: var(--transition);
         }
-        .whatsapp-float:hover { transform: scale(1.1); background: #128c7e; }
 
-        /* Footer */
-        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #222; margin-top: 50px; background: #050505; }
-        .footer-logo { font-family: 'Orbitron'; font-size: 1.5rem; margin-bottom: 20px; display: block; }
+        nav ul li a:hover {
+            color: var(--primary-red);
+            letter-spacing: 1px;
+        }
 
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('8958.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+            animation: slideDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: #ddd;
+            animation: slideUp 1s ease;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: 2px solid var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--primary-red);
+            box-shadow: 0 0 20px var(--primary-red);
+        }
+
+        /* --- FILTER BUTTONS --- */
+        .filter-container {
+            text-align: center;
+            padding: 80px 0 20px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid #333;
+            color: white;
+            padding: 10px 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+            transform: scale(1.05);
+        }
+
+        /* --- GALLERY GRID --- */
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .section-title span { color: var(--primary-red); border-bottom: 3px solid var(--primary-red); }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 5%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover img { transform: scale(1.1); filter: brightness(0.8); }
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: var(--card-bg);
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .wa-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #25d366;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .wa-link:hover { text-decoration: underline; }
+
+        /* Animation Classes */
+        .card.hide { display: none; }
+        .card.show { animation: fadeIn 0.5s ease forwards; }
+
+        /* --- FEATURES (WHY CHOOSE US) --- */
+        .features {
+            background: #141414;
+            padding: 80px 5%;
+            margin-top: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 3.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 { font-family: 'Orbitron'; margin-bottom: 15px; font-size: 1.5rem; }
+        .feature-box p { color: var(--gray-text); }
+
+        /* --- TESTIMONIALS (PARALLAX) --- */
+        .testimonials {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('8966.jpg'); /* Engine Image */
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .test-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 350px;
+        }
+
+        .stars { color: #f1c40f; margin-bottom: 15px; }
+        .test-card h4 { margin-top: 20px; color: var(--primary-red); font-style: italic; }
+
+        /* --- NEWSLETTER --- */
+        .newsletter {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #1a1a1a, #0a0a0a);
+        }
+
+        .newsletter-form input {
+            padding: 15px;
+            width: 300px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+            background: var(--primary-red);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        .newsletter-form button:hover { background: white; color: black; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #050505;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .whatsapp-float span { display: none; }
-            .whatsapp-float { border-radius: 50%; padding: 20px; }
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Mobile menu can be added later */
+            .newsletter-form input { width: 100%; margin-bottom: 10px; }
+            .newsletter-form button { width: 100%; margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">MARACADE <span>AUTO SPARE PARTS</span></a>
-        <div style="color: var(--primary-red); font-weight: bold; font-family: 'Orbitron'; font-size: 0.8rem;" class="hide-mobile">GENUINE QUALITY</div>
+        <a href="#" class="logo">MARACADE <span>AUTO</span></a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero">
-        <h1>MARACADE AUTO SPARE PARTS</h1>
-        <p>Premium Distributor of Genuine Motorcycle and Bicycle Spare Parts in Somalia. Reliable Engines, Durable Tires, and Expert Support.</p>
-        <a href="#products" class="filter-btn active" style="text-decoration: none; padding: 15px 40px;">Shop Catalog</a>
+    <section id="home" class="hero">
+        <h1>Ride With Confidence</h1>
+        <p>Your #1 Source for Genuine Motorcycle & Bicycle Spare Parts in Somalia. Reliable Engines. Durable Parts. Unbeatable Prices.</p>
+        <a href="#products" class="btn">Explore Inventory</a>
     </section>
 
     <section id="products">
         <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">All Inventory</button>
+            <button class="filter-btn active" data-filter="all">All Products</button>
             <button class="filter-btn" data-filter="motorcycle">Motorcycles</button>
             <button class="filter-btn" data-filter="bicycle">Bicycles</button>
             <button class="filter-btn" data-filter="parts">Spare Parts</button>
         </div>
 
+        <h2 class="section-title">Premium <span>Inventory</span></h2>
+
         <div class="gallery-grid">
-            <div class="card" data-category="motorcycle">
-                <img src="8958.jpg" alt="Motorbike">
-                <div class="card-content"><h3>Sport Series</h3><p>High Performance Motors</p></div>
+            
+            <div class="card show" data-category="motorcycle">
+                <img src="8958.jpg" alt="Sport Bike">
+                <div class="card-content">
+                    <h3>High-Performance Sport Bike</h3>
+                    <p>Powerful 250cc engine with modern design.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in the Sport Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
             </div>
-            <div class="card" data-category="bicycle">
-                <img src="8964.jpg" alt="Bicycle">
-                <div class="card-content"><h3>Mountain Pro</h3><p>Built for Adventure</p></div>
+
+            <div class="card show" data-category="motorcycle">
+                <img src="8957.jpg" alt="ATV Quad">
+                <div class="card-content">
+                    <h3>Off-Road ATV Quad</h3>
+                    <p>Rugged design for any terrain.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in the ATV" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
             </div>
-            <div class="card" data-category="parts">
-                <img src="8956.jpg" alt="Engine">
-                <div class="card-content"><h3>Engine Block</h3><p>Genuine Replacement</p></div>
+
+            <div class="card show" data-category="motorcycle">
+                <img src="8963.jpg" alt="Kavaki Bike">
+                <div class="card-content">
+                    <h3>KAVAKI Utility Bike</h3>
+                    <p>Fuel efficient and durable for daily use.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in Kavaki" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
             </div>
-            <div class="card" data-category="motorcycle">
-                <img src="8963.jpg" alt="Kavaki">
-                <div class="card-content"><h3>Kavaki Cargo</h3><p>Somali Standard Choice</p></div>
+
+            <div class="card show" data-category="bicycle">
+                <img src="8964.jpg" alt="Mountain Bike">
+                <div class="card-content">
+                    <h3>Pro Mountain Bike</h3>
+                    <p>Suspension system and lightweight frame.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in Mountain Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
             </div>
-            <div class="card" data-category="parts">
-                <img src="8932.jpg" alt="Chrome">
-                <div class="card-content"><h3>Chrome Accents</h3><p>Premium Protection</p></div>
+
+            <div class="card show" data-category="bicycle">
+                <img src="8965.jpg" alt="Electric Bike">
+                <div class="card-content">
+                    <h3>LMX Electric Bike</h3>
+                    <p>Modern e-bike with long battery life.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in E-Bike" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
             </div>
-             <div class="card" data-category="bicycle">
-                <img src="8965.jpg" alt="LMX">
-                <div class="card-content"><h3>Electric LMX</h3><p>Modern Mobility</p></div>
+
+            <div class="card show" data-category="parts">
+                <img src="8956.jpg" alt="Engine Block">
+                <div class="card-content">
+                    <h3>Complete Engine Assembly</h3>
+                    <p>Genuine engine blocks for maximum power.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in Engine" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
+            </div>
+
+            <div class="card show" data-category="parts">
+                <img src="8932.jpg" alt="Chrome Cover">
+                <div class="card-content">
+                    <h3>Chrome Engine Covers</h3>
+                    <p>Stylish protection for your motorbike.</p>
+                    <a href="https://wa.me/252615288183?text=I'm interested in Chrome Parts" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
+            </div>
+             <div class="card show" data-category="parts">
+                <img src="8959.jpg" alt="Bike Chain">
+                <div class="card-content">
+                    <h3>Transmission Systems</h3>
+                    <p>Chains, sprockets, and belts.</p>
+                    <a href="https://wa.me/252615288283?text=I'm interested in Transmission" class="wa-link"><i class="fab fa-whatsapp"></i> Order Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Why Choose <span>Maracade?</span></h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>We deliver across Somalia with speed and care.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-medal"></i>
+                <h3>Genuine Parts</h3>
+                <p>100% Original parts directly from manufacturers.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Expert mechanics ready to assist you anytime.</p>
             </div>
         </div>
     </section>
 
-    <section class="location-section">
-        <h2 style="font-family: 'Orbitron'; font-size: 2rem; margin-bottom: 10px;">Visit Our <span>Showroom</span></h2>
-        <p>Located in the heart of Mogadishu, Somalia</p>
-        <div class="map-wrapper">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.525!2d45.32!3d2.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDInMjQuMCJOIDQ1wrAxOScyNC4wIkU!5e0!3m2!1sen!2sso!4v1625000000000!5m2!1sen!2sso" 
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+    <section class="testimonials">
+        <h2 class="section-title">Customer <span>Reviews</span></h2>
+        <div class="testimonial-container">
+            <div class="test-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Best place for bike engines in Mogadishu. The quality is unmatched!"</p>
+                <h4>- Hassan Ali</h4>
+            </div>
+            <div class="test-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p>"I bought my mountain bike here. Great service and friendly staff."</p>
+                <h4>- Mohamed Deeq</h4>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <span class="footer-logo">MARACADE <span style="color:var(--primary-red)">AUTO SPARE PARTS</span></span>
-        <p>© 2026 All Rights Reserved. Reliable Parts for Reliable Rides.</p>
-        <div style="margin-top: 20px; font-size: 0.9rem; color: #555;">
-            Developed with ❤️ for Maracade
-        </div>
+    <section class="newsletter">
+        <h2 style="font-family:'Orbitron'; margin-bottom: 20px;">Join Our Newsletter</h2>
+        <p style="margin-bottom: 20px; color: #ccc;">Get the latest updates on new arrivals and discounts.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <div class="logo" style="font-size: 1.5rem;">MARACADE <span>AUTO</span></div>
+        <p style="margin: 15px 0; color: #777;">Quality you can trust. Power you can feel.</p>
+        <p style="color: #555;">&copy; 2026 Maracade Auto Spare Parts. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Developed with <span style="color: red;">&hearts;</span> for Maracade</p>
     </footer>
 
-    <a href="https://wa.me/252617720769" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp" style="font-size: 25px;"></i>
-        <span>Order on WhatsApp</span>
+    <a href="https://wa.me/252615288183" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // Smooth Filter Logic
+        // 1. Filter Logic
         const filterBtns = document.querySelectorAll('.filter-btn');
         const cards = document.querySelectorAll('.card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
+                // Remove active class from all
                 document.querySelector('.filter-btn.active').classList.remove('active');
+                // Add active to clicked
                 btn.classList.add('active');
 
-                const filter = btn.getAttribute('data-filter');
+                const filterValue = btn.getAttribute('data-filter');
 
                 cards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => { card.style.opacity = '1'; }, 10);
+                    if(filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
                     } else {
-                        card.style.display = 'none';
-                        card.style.opacity = '0';
+                        card.classList.add('hide');
+                        card.classList.remove('show');
                     }
                 });
             });
+        });
+
+        // 2. Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // 3. Simple Form Alert
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to Maracade Auto!');
         });
     </script>
 </body>
