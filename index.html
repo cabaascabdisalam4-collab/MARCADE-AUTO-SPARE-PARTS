@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARACADE AUTO SPARE PARTS | Tayo iyo Kalsooni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-red: #ff0000;
+            --dark-black: #0a0a0a;
+            --accent-gray: #1f1f1f;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span { color: var(--primary-red); }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        nav ul li a:hover { color: var(--primary-red); }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('8958.jpg'); /* Sawirka weyn ee Mootada */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .cta-btn {
+            padding: 15px 35px;
+            background: var(--primary-red);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-red);
+        }
+
+        /* --- Gallery Section --- */
+        .section { padding: 80px 5%; }
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .section-title span { color: var(--primary-red); }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--accent-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover img { transform: scale(1.05); }
+
+        .card-content { padding: 20px; text-align: center; }
+        .card-content h3 { margin-bottom: 15px; font-family: 'Orbitron'; font-size: 1.1rem; }
+
+        /* --- WhatsApp Floating Button --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* --- About Us --- */
+        #about { background: #111; text-align: center; }
+        .about-text { max-width: 900px; margin: 0 auto; color: #aaa; font-size: 1.1rem; }
+
+        /* --- Footer --- */
+        footer {
+            padding: 40px 5%;
+            background: var(--dark-black);
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MARACADE <span>AUTO</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#parts">Spare Parts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>MARACADE AUTO</h1>
+        <p>Waxaan kuu haynaa spare parts-ka ugu tayada fiican ee mootooyinka iyo baabuurta. Hel agab asli ah oo lagu kalsoonaan karo.</p>
+        <a href="#parts" class="cta-btn">Eeg Agabka Hadda</a>
+    </section>
+
+    <section class="section" id="parts">
+        <h2 class="section-title">Our <span>Spare Parts</span></h2>
+        <div class="gallery-grid">
+            
+            <div class="card">
+                <img src="8956.jpg" alt="Engine Part">
+                <div class="card-content">
+                    <h3>High Performance Engines</h3>
+                    <a href="https://wa.me/252610000000?text=Waxaan rabaa Engine" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="8957.jpg" alt="ATV Bike">
+                <div class="card-content">
+                    <h3>Premium ATV Spare Parts</h3>
+                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="8963.jpg" alt="Motorcycle">
+                <div class="card-content">
+                    <h3>KAVAKI Motorbikes</h3>
+                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="8964.jpg" alt="Bicycle">
+                <div class="card-content">
+                    <h3>Mountain Bike Parts</h3>
+                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="8959.jpg" alt="E-Bike Tech">
+                <div class="card-content">
+                    <h3>Electric Bike Systems</h3>
+                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="8966.jpg" alt="Chrome Engine">
+                <div class="card-content">
+                    <h3>Chrome Engine Covers</h3>
+                    <a href="https://wa.me/252610000000" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">Dalbo Hadda</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Us</span></h2>
+        <div class="about-text">
+            <p>Maracade Auto Spare Parts waa shirkadda hormuudka u ah keenista agabka baabuurta iyo mootooyinka ee dalka. Waxaan xoogga saarnaa tayada iyo qancinta macaamiisheena. Dhammaan alaabtayada waa kuwo dammaanad leh oo laga keenay warshadaha ugu caansan caalamka.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MARACADE AUTO SPARE PARTS. All Rights Reserved.</p>
+        <p style="margin-top: 10px; color: #555;">Developed with ❤️ for Maracade</p>
+    </footer>
+
+    <a href="https://wa.me/252617720769" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
